@@ -1,67 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
 
-    <LinearLayout
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="40dp"
-        android:orientation="vertical"
-        android:padding="24dp"
+        android:layout_height="match_parent">
 
-        tools:context="com.param.android.myappportfolio.MainActivity">
-
-        <TextView
+        <LinearLayout
+            android:id="@+id/linear_layout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/my_nanodegree_heading"
-            android:textAlignment="center"
-            android:textColor="#2E3D49"
-            android:textSize="26dp" />
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/Linear_layout_margin"
+            android:orientation="vertical"
+            android:padding="@dimen/Linear_layout_padding"
+            tools:context="com.param.android.myappportfolio.MainActivity">
 
-        <Button
-            android:id="@+id/btn_popular_movies"
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:onClick="popularMovie"
-            android:text="@string/poplular_movies" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/my_nanodegree_heading"
+                android:textAlignment="center"
+                android:textColor="@color/White"
+                android:textSize="@dimen/heading_text_size" />
+
+            <Button
+                android:id="@+id/btn_popular_movies"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+
+                android:text="@string/poplular_movies" />
 
 
-        <Button
-            android:id="@+id/btn_stock_hawk"
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:onClick="stockHawk"
-            android:text="@string/stock_hawk" />
+            <Button
+                android:id="@+id/btn_stock_hawk"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:text="@string/stock_hawk" />
 
-        <Button
-            android:id="@+id/btn_buildit_bigger"
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:onClick="buildItBigger"
-            android:text="@string/buildit_bigger" />
+            <Button
+                android:id="@+id/btn_buildit_bigger"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:text="@string/buildit_bigger" />
 
-        <Button
-            android:id="@+id/btn_make_app_material"
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:onClick="makeYourAppMaterial"
-            android:text="@string/make_app_material" />
+            <Button
+                android:id="@+id/btn_make_app_material"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:text="@string/make_app_material" />
 
-        <Button
-            android:id="@+id/btn_go_ubiquitous"
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:onClick="goUbiquitous"
-            android:text="@string/go_ubiquitous" />
+            <Button
+                android:id="@+id/btn_go_ubiquitous"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:text="@string/go_ubiquitous" />
 
-        <Button
-            android:id="@+id/btn_capstone"
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:onClick="capstone"
-            android:text="@string/capstone" />
-    </LinearLayout>
-</ScrollView>
+            <Button
+                android:id="@+id/btn_capstone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:text="@string/capstone" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>
