@@ -8,8 +8,9 @@ import android.widget.Button;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-
+    //Private object for Toast to handle toast messages
     private static Toast toast;
+    //Private objects for buttons
     private Button btnPopluarMovies, btnStockHawk, btnBuildItBigger, btnMakeAppMaterial, btnGoUbiquitous, btnCapstone;
 
     @Override
@@ -21,7 +22,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View view) {
-
+        // To identify from which button was the click triggered
         switch (view.getId()) {
 
             case R.id.btn_popular_movies:
@@ -50,8 +51,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
 
     }
-
-    private void ButtonInit() {
+    //To initialize button
+      private void ButtonInit() {
         btnPopluarMovies = (Button) findViewById(R.id.btn_popular_movies);
         btnStockHawk = (Button) findViewById(R.id.btn_stock_hawk);
         btnBuildItBigger = (Button) findViewById(R.id.btn_buildit_bigger);
@@ -67,6 +68,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnStockHawk.setOnClickListener(this);
     }
 
+   //To format message and send to showToast
     public void displayToast(Button button) {
         showToast(this,
                 getString(R.string.toast_msg_1) +" "+
@@ -75,6 +77,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         );
     }
 
+    //Toast
     private void showToast(Context ctx, String message) {
         if (toast != null) {
             toast.cancel();
